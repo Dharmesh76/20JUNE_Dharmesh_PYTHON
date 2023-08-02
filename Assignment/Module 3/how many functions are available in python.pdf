@@ -1,0 +1,21 @@
+Built-in Functions:
+Python comes with a rich set of built-in functions that are available without requiring any additional imports. These functions cover a wide range of tasks and operations.
+
+Some examples of built-in function types include:
+
+Numeric Functions: abs(), max(), min(), sum(), round(), etc.
+String Functions: len(), str(), format(), split(), join(), etc.
+List and Tuple Functions: len(), sorted(), reversed(), enumerate(), zip(), etc.
+Dictionary Functions: keys(), values(), items(), get(), etc.
+Conversion Functions: int(), float(), str(), list(), tuple(), etc.
+Type Checking Functions: type(), isinstance(), callable(), etc.
+
+User-Defined Functions:
+These are functions created by the programmer to perform specific tasks or operations. User-defined functions provide a way to modularize code and improve code reusability.
+User-defined functions can be categorized based on their purpose:
+
+Regular Functions: 
+These are general-purpose functions that perform a specific task and may take arguments and return values.
+Lambda (Anonymous) Functions: These are small, inline functions defined using the lambda keyword. They are often used for simple operations and are not explicitly named.
+Recursive Functions: Functions that call themselves, usually with modified arguments, to solve a problem through smaller instances of the same problem.
+Generator Functions: Functions that use the yield keyword to create iterators, allowing lazy evaluation and efficient memory usage.
