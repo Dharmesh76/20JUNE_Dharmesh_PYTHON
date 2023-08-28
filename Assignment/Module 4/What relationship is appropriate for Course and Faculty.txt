@@ -1,0 +1,19 @@
+Many-to-Many Relationship: A "Course" can have multiple faculty members who teach it, 
+and a faculty member can teach multiple courses. This is a classic many-to-many relationship.
+
+Intermediary Entity: To model this relationship, you would often introduce an intermediary entity to connect 
+the "Course" and "Faculty" entities. This entity stores additional information about the teaching assignment, 
+such as the semester, year, workload distribution, etc.
+
+Here's how the entities and their relationships might be structured:
+
+Course: Contains information about a specific academic course.
+
+Attributes: course_id, course_name, course_description, etc.
+Faculty: Represents a faculty member.
+
+Attributes: faculty_id, faculty_name, faculty_email, etc.
+TeachingAssignment: The intermediary entity that represents the assignment of a faculty member to a specific course.
+
+Attributes: assignment_id, course_id (foreign key referencing Course), faculty_id (foreign key referencing Faculty), 
+semester, year, workload_percentage, etc.

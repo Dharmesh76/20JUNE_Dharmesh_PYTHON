@@ -1,0 +1,6 @@
+person: Represents a generic individual with basic personal information.
+
+Attributes: person_id, first_name, last_name, date_of_birth, etc.
+Student: Represents a specialization of a "Person" who is a student.
+
+Inherits attributes from "Person" and adds additional attributes specific to a student: student_id, enrollment_date, major, etc.

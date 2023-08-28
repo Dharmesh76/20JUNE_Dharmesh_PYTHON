@@ -1,0 +1,12 @@
+Oop concept is object orient programming
+concept of oop
+       1. Class
+       2. object
+       3. Inheritence
+              1.single Inheritence
+              2.multiple Inheritence
+              3. multiplevel Inheritence
+       4. encapsulisation
+       5. Polymorphism
+       6. 
+multiple Inheritence not support in java       

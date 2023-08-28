@@ -1,0 +1,9 @@
+Opening a File: Use the open() function to open a file. This function takes two arguments: the file path and the mode in which you want to open the file. The modes include:
+
+'r': Read mode (default). Opens the file for reading.
+'w': Write mode. Opens the file for writing. Creates a new file if it doesn't exist or truncates the existing content.
+'a': Append mode. Opens the file for writing, but appends new content to the end of the existing content.
+'x': Exclusive creation mode. Creates a new file but raises an error if the file already exists.
+Writing to the File: After opening the file in write mode ('w' or 'a'), you can use the .write() method to write data to the file.
+
+Closing the File: It's essential to close the file after you're done with it to free up system resources. You can use the .close() method for this.
