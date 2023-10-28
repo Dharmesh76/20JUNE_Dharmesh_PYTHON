@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
+    <title>Admin</title>
+    <link rel="icon" href="/static/images/favicon.png">
+    <style>
+
+    </style>
+</head>
+
+<body style="background-color: darkgray;">
+    <!-- navbar start -->
+    <nav class="navbar navbar-dark bg-dark ">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="/">
+                <img src="/static/images/brand logo.png" style="margin-top: 3px;" alt="Logo" width="20" height="24"
+                    class="d-inline-block align-text-top">
+                Z Mobile Zone
+            </a>
+        </div>
+    </nav>
+    <!-- navbar end -->
+    <!-- Form Start -->
+
+    <div class="container"> 
+        <form class="row g-3 needs-validation" novalidate method="post" enctype="multipart/form-data" style="margin-top: 40px;">
+            {% csrf_token %}
+            <div class="col-md-3">
+                <label for="validationCustom04" class="form-label">Select product</label>
+                <select class="form-select" name="product" id="validationCustom04" required >
+                  <option selected disabled id="">Choose...</option>
+                  {% for company in data%}
+                      <option value="{{company.id}}">{{company.product_name}}</option>
+                  {% endfor %}
+                 
+                </select>
+                <div class="invalid-feedback">
+                  Please select a valid Product
+                </div>
+              </div>
+            <div class="col-md-4">
+              <label for="validationCustom01" class="form-label">Product Price</label>
+              <input type="text" class="form-control" id="validationCustom01" name="product_price" required>
+              <div class="valid-feedback">
+                Looks good!
+              </div>
+            </div>
+            <div class="col-md-4">
+              <label for="validationCustom02" class="form-label">Product Model</label>
+              <input type="text" class="form-control" name="product_model" id="validationCustom02"  required>
+              <div class="valid-feedback">
+                Looks good!
+              </div>
+            </div>
+            <div class="col-md-3">
+              <label for="validationCustom05" class="form-label">Product Ram</label>
+              <input type="Text" class="form-control" name="product_ram" id="validationCustom05" required>
+              <div class="invalid-feedback">
+                Plese Enter Valid Price Ex.000000000.00
+              </div>
+            </div>
+            <div class="col-12">
+            <div class="col-md-4">
+                <label for="validationCustom02" class="form-label">Image</label>
+                <input type="file" name="product_image" id="product_image">
+            </div>
+            <!-- <div class="col-md-12">
+              <label for="validationCustom03" class="form-label">Image</label>
+              <input type="image" class="form-control" id="validationCustom03" required>
+              <div class="invalid-feedback">
+                Please upload image
+              </div>
+            </div> -->
+           
+              <button class="btn btn-primary" type="submit">Submit form</button>
+            </div>
+          </form>
+    </div>
+
+    <!-- Form End -->
