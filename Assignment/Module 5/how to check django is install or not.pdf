@@ -1,0 +1,9 @@
+Open your command prompt or terminal.
+
+Type the following command:
+
+django-admin --version
+
+or
+
+python -m django --version

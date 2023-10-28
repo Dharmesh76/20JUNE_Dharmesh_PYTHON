@@ -1,0 +1,3 @@
+following line use for load data in django
+
+model.objects.all()

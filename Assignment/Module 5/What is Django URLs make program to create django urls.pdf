@@ -1,0 +1,47 @@
+Create a Django Project:
+If you haven't already, create a Django project 
+by running the following command:
+
+django-admin startproject projectname
+Create a Django App:
+Next, create a Django app within your 
+project by running the following command:
+
+python manage.py startapp myapp
+Define a View:
+In your app's views.py file, define a view function. This function will be 
+responsible for rendering content when a specific URL is accessed. Here's a 
+simple example:
+
+from django.http import HttpResponse
+
+def hello(request):
+    return HttpResponse("Hello, Django!")
+
+Create a URL Pattern:
+In your app's urls.py file (if it doesn't exist, create it), define a URL pattern. 
+This URL pattern will associate a URL with the hello view function you created. Here's an example 
+of a URL pattern definition:
+
+from django.urls import path
+from . import views  # Import the views module from your app
+
+urlpatterns = [
+    path('hello/', views.hello, name='hello_view'),
+]
+In this example, the URL pattern associates the URL path 'hello/' 
+with the hello view function.
+
+Include the App's URLs in the Project:
+To make the URL patterns of your app available to the project, you need to include your 
+app's URLs in the project's urls.py file. In the project's urls.py file, add an include statement 
+and specify the URL patterns from your app:
+
+from django.contrib import admin
+from django.urls import path, include  # Import the include function
+
+urlpatterns = [
+    path('admin/', admin.site.urls),
+    path('myapp/', include('myapp.urls')),  # Include the app's URLs
+]
+In this example, all URLs starting with 'myapp/' will be handled by the URL patterns defined in your app's urls.py file.

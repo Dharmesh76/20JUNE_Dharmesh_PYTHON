@@ -1,0 +1,23 @@
+Generating Translation Message Files:
+When you develop a Django project, you often include text in your code and 
+that you want to make available for translation into different languages. 
+These text strings are referred to as "translation strings." The make messages 
+command scans your project's source code and templates to identify these strings and creates 
+or updates a .po (Portable Object) file for each language you want to support. Each .po file contains 
+the original text and a placeholder for the translated text.
+
+Collecting Translation Strings:
+The make messages command collects the translation strings from various parts 
+of your project, including Python code (using the gettext function or its aliases) and templates 
+(using the {% trans %} template tag). It also scans for other translation-related functions and tags, 
+such as ugettext, pgettext, and blocktrans.
+
+Updating Existing Translation Files:
+If you've already created translation message files, running make messages will 
+update these files with any new or modified translation strings in your project. This ensures 
+that the translation files stay up-to-date as your project evolves.
+
+Multiple Languages:
+You can specify which languages you want to generate or update translation 
+message files for by providing the language code as an argument to the make 
+messages command. For example:

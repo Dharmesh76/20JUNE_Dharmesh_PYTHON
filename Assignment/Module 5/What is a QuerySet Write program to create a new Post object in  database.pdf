@@ -1,0 +1,26 @@
+# models.py in your app
+from django.db import models
+
+class Post(models.Model):
+    title = models.CharField(max_length=200)
+    content = models.TextField()
+    pub_date = models.DateTimeField('date published')
+
+    def __str__(self):
+        return self.title
+
+
+from myapp.models import Post  # Replace 'myapp' with the actual name of your app.
+
+new_post = Post(title="Sample Post", content="This is the content of the post.", pub_date=timezone.now())
+
+new_post.save()
+
+from myapp.models import Post  # Import your Post model
+from django.utils import timezone  # Import timezone for date handling
+
+# Create a new Post instance
+new_post = Post(title="Sample Post", content="This is the content of the post.", pub_date=timezone.now())
+
+# Save the object to the database
+new_post.save()
